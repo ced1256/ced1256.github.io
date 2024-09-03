@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💌</title>
+    <link rel="stylesheet" href="./styleletter.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="envelope-wrapper">
+        <div class="envelope">
+          <div class="letter">
+            <div class="text">
+              <strong>To the girl who i love the most,</strong>
+              <p>
+                I love you more than the sands in the beaches, stars in the sky,
+                dust in the air. You've always been my wish, my big what-if that
+                came true. And when i go, i'll get flashbacks of us, every
+                moment with you, everytime we laughed or cried, every sweet
+                nothings of ours.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="heart"></div>
+      </div>
+    </div>
+    <script>
+      const envelope = document.querySelector(".envelope-wrapper");
+      envelope.addEventListener("click", () => {
+        envelope.classList.toggle("flap");
+      });
+    </script>
+  </body>
+</html>

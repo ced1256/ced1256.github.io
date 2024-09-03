@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google Search Results</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .logo {
+        width: 150px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+      .search-bar {
+        margin-bottom: 20px;
+      }
+      .search-input {
+        width: 400px;
+        padding: 10px;
+        font-size: 16px;
+      }
+      .search-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #f2f2f2;
+        border: 1px solid #d3d3d3;
+        cursor: pointer;
+      }
+      .tabs {
+        margin-bottom: 20px;
+      }
+      .tab {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        color: #1a0dab;
+        border-bottom: 3px solid transparent;
+      }
+      .tab.active {
+        border-bottom: 3px solid #1a0dab;
+        font-weight: bold;
+      }
+      .results,
+      .image-results {
+        display: none;
+      }
+      .results.active,
+      .image-results.active {
+        display: block;
+      }
+      .result-item {
+        margin-bottom: 20px;
+      }
+      .result-title {
+        font-size: 18px;
+        color: #1a0dab;
+        text-decoration: none;
+      }
+      .result-url {
+        font-size: 14px;
+        color: #006621;
+      }
+      .result-title:visited {
+        color: #551a8b;
+      }
+      .result-title:hover {
+        text-decoration: underline;
+      }
+      .result-description {
+        font-size: 14px;
+        color: #545454;
+      }
+      .image-item {
+        display: inline-block;
+        width: 200px;
+        margin: 10px;
+        text-align: center;
+      }
+      .image-item img {
+        width: 100%;
+        height: auto;
+      }
+      .image-title {
+        font-size: 14px;
+        color: #1a0dab;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="home_page.html">
+      <img
+        class="logo"
+        src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+        alt="Google Logo"
+      />
+    </a>
+
+    <div class="search-bar">
+      <input
+        type="text"
+        class="search-input"
+        id="search-input"
+        value="I Love You"
+      />
+      <input type="submit" class="search-button" value="Google Search" />
+    </div>
+
+    <div class="tabs">
+      <span class="tab active" onclick="showResults('all')">All</span>
+      <span class="tab" onclick="showResults('images')">Images</span>
+    </div>
+
+    <div class="results active" id="all-results">
+      <!-- Original search results here -->
+      <div class="result-item">
+        <a href="why_index.html" class="result-title"
+          >10 Reasons why I like you</a
+        ><br />
+        <span class="result-url">www.whyilikeyou.com</span><br />
+        <span class="result-description"
+          >Since you always ask me why i like you, i decided to make a top 10,
+          among any of course😘</span
+        >
+      </div>
+      <div class="result-item">
+        <a
+          href="https://cuhko365-my.sharepoint.com/:p:/g/personal/122040005_link_cuhk_edu_cn/Ee2aKQ3-9p9Krz0XWf8NFCwBpbN8rd7ygor1lQv0ys1SbQ?e=sr6NG6"
+          class="result-title"
+          >Why we should date</a
+        ><br />
+        <span class="result-url">www.whyweshoulddate.com</span><br />
+        <span class="result-description">lets date!</span>
+      </div>
+      <div class="result-item">
+        <a href="scrapbookindex.html" class="result-title"
+          >A scrapbook for you❤️</a
+        ><br />
+        <span class="result-url">www.scrapbook.com</span><br />
+        <span class="result-description">my favorite photos of us</span>
+      </div>
+      <div class="result-item">
+        <a href="letter.html" class="result-title">A letter for you</a><br />
+        <span class="result-url">www.letter4you.com</span><br />
+        <span class="result-description">hehe</span>
+      </div>
+      <div class="result-item">
+        <a
+          href="https://open.spotify.com/playlist/4xe81zaLEkzIno7RlKbPmf?si=fd5f4c38c48349e6&pt=f631cc36db76fa1a2b40ef6d0ba3e421"
+          class="result-title"
+          >All the songs that remind me of you</a
+        ><br />
+        <span class="result-url">www.songsofyou.com</span><br />
+        <span class="result-description"
+          >"You're still the picture in my locket, Lucky penny in my
+          pocket"</span
+        >
+      </div>
+      <div class="result-item">
+        <a
+          href="https://crosswordlabs.com/embed/our-favorite-songs"
+          class="result-title"
+          >Made us a crossword of our favorite songs!😘</a
+        ><br />
+        <span class="result-url">www.crossword.com</span><br />
+        <span class="result-description"
+          >crossword of our favorite songs!❤️</span
+        >
+      </div>
+    </div>
+
+    <div class="image-results" id="image-results">
+      <!-- Sample image search results -->
+      <div class="image-item">
+        <img
+          src="1a39f1af-d377-46bc-90a1-10a8fd6c95ac.JPG"
+          alt="Sample image 1"
+        />
+        <div class="image-title">my bb is ridiculously pretty😍</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_aussie_1.JPG" alt="Sample Image 2" />
+        <div class="image-title">breathtaking🥰</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_aussie_2.JPG" alt="Sample Image 3" />
+        <div class="image-title">prettiest girl in melbourne‼️🗣️</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_aussie_3.JPG" alt="Sample Image 4" />
+        <div class="image-title">how can someone be this beautiful??!!❤️</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_bun.JPG" alt="Sample Image 5" />
+        <div class="image-title">hehe cute🥰</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_closeup.JPG" alt="Sample Image 6" />
+        <div class="image-title">also v cute🥰</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_cute.JPG" alt="Sample Image 7" />
+        <div class="image-title">😋</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_glasses.JPG" alt="Sample Image 8" />
+        <div class="image-title">you literally look perfect in glasses🤩</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_hdl.JPG" alt="Sample Image 9" />
+        <div class="image-title">DAMN who's that pretty girl😍</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_konser.JPG" alt="Sample Image 10" />
+        <div class="image-title">literally stunning, i was SHOOK🤯</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_wallpaper.JPG" alt="Sample Image 11" />
+        <div class="image-title">fell in love again looking at this🥰</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_Wc.JPG" alt="Sample Image 12" />
+        <div class="image-title">📸</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_yuki.png" alt="Sample Image 13" />
+        <div class="image-title">two cutest things in the world</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_bobo.PNG" alt="Sample Image 7" />
+        <div class="image-title">sleepy bb😪</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_bobo2.PNG" alt="Sample Image 8" />
+        <div class="image-title">my sleeping beauty</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_bobo3.PNG" alt="Sample Image 9" />
+        <div class="image-title">emg bisa tidur secantik ini</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_konser2.JPG" alt="Sample Image 10" />
+        <div class="image-title">AAAA T B FANS SKLI P NN😍😍😍😍😍😍</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_melb4.jpg" alt="Sample Image 11" />
+        <div class="image-title">how did i even pull this😭</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_melb5.jpg" alt="Sample Image 12" />
+        <div class="image-title">i can't stop crushing on you</div>
+      </div>
+      <div class="image-item">
+        <img src="lana_phoenix.JPG" alt="Sample Image 13" />
+        <div class="image-title">my favorite outfit of yours🤩</div>
+      </div>
+      <!-- More image items... -->
+    </div>
+
+    <script>
+      function showResults(type) {
+        const allTab = document.querySelector(".tab:nth-child(1)");
+        const imagesTab = document.querySelector(".tab:nth-child(2)");
+        const allResults = document.getElementById("all-results");
+        const imageResults = document.getElementById("image-results");
+        const searchInput = document.getElementById("search-input");
+
+        if (type === "all") {
+          allTab.classList.add("active");
+          imagesTab.classList.remove("active");
+          allResults.classList.add("active");
+          imageResults.classList.remove("active");
+          searchInput.value = "I Love You"; // Default text for 'All' tab
+        } else if (type === "images") {
+          imagesTab.classList.add("active");
+          allTab.classList.remove("active");
+          imageResults.classList.add("active");
+          allResults.classList.remove("active");
+          searchInput.value = "My favorite pictures of you"; // New text for 'Images' tab
+        }
+      }
+    </script>
+  </body>
+</html>

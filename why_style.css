@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+
+body {
+  font-family: "Amatic SC", sans-serif;
+  background-color: #ffc0cb; /* Light pink background */
+  display: flex;
+  justify-content: center;
+  align-items: start; /* Aligns items at the top */
+  min-height: 100vh; /* Allows the body to cover at least the viewport height */
+  margin: 0;
+  padding: 20px; /* Padding around the edges of the body */
+  box-sizing: border-box;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column; /* Stacks the cards vertically */
+  align-items: center; /* Centers cards horizontally */
+  width: 100%; /* Takes up full width of the viewport */
+  max-width: 600px; /* Optional: limits the container width */
+  margin-top: 20px; /* Top margin for spacing */
+}
+
+.message-card {
+  background-color: rgb(255, 255, 228);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px 0; /* Margin to create space between cards */
+  padding: 40px;
+  height: 500px; /* Fixed card height */
+  width: 450px; /* Fixed card width */
+  box-sizing: border-box;
+}
+
+.message-text {
+  font-size: 24px;
+  color: #ff69b4; /* Pink text color */
+  margin: 0;
+  text-align: center;
+  font-size: 50px;
+}
+
+.tenor-gif-embed {
+  border-style: solid;
+  border-width: 5px;
+  border-color: #ffc0cb;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Center the GIF within the message card */
+}
